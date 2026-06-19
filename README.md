@@ -127,12 +127,49 @@ VocabularyApp/
 Excel导入 → 数据库存储 → 界面展示 → 用户操作 → 数据更新
 ```
 
-## 特色亮点
+## 🔌 API 接口说明
+
+### 数据库操作接口
+
+#### Word 相关操作
+
+| 方法名                                 | 功能描述       | 参数                           | 返回值           |
+| -------------------------------------- | -------------- | ------------------------------ | ---------------- |
+| `addWord(Word word)`                   | 添加单词       | `Word`: 单词对象               | `long`: 插入的ID |
+| `getAllWords()`                        | 获取所有单词   | 无                             | `List<Word>`     |
+| `searchWords(String keyword)`          | 搜索单词       | `keyword`: 搜索关键词          | `List<Word>`     |
+| `getFavoriteWords()`                   | 获取收藏单词   | 无                             | `List<Word>`     |
+| `updateFavorite(int id, boolean flag)` | 更新收藏状态   | `id`: 单词ID, `flag`: 是否收藏 | `int`: 影响行数  |
+| `updateDifficulty(int id, int level)`  | 更新难度等级   | `id`: 单词ID, `level`: 难度    | `int`: 影响行数  |
+| `getTotalWordCount()`                  | 获取单词总数   | 无                             | `int`: 数量      |
+| `getLearnedWordCount()`                | 获取已学单词数 | 无                             | `int`: 数量      |
+
+#### StudyRecord 相关操作
+
+| 方法名                               | 功能描述     | 参数                    | 返回值           |
+| ------------------------------------ | ------------ | ----------------------- | ---------------- |
+| `addStudyRecord(StudyRecord record)` | 添加学习记录 | `StudyRecord`: 记录对象 | `long`: 插入的ID |
+| `getTestCount()`                     | 获取测试次数 | 无                      | `int`: 次数      |
+| `getAverageScore()`                  | 获取平均得分 | 无                      | `double`: 平均分 |
+| `getHighestScore()`                  | 获取最高分   | 无                      | `int`: 最高分    |
+
+### Excel 导入接口
+
+| 方法名                        | 功能描述        | 参数           | 返回值              |
+| ----------------------------- | --------------- | -------------- | ------------------- |
+| `importFromExcel(Uri uri)`    | 从Excel导入单词 | `uri`: 文件URI | `int`: 导入数量     |
+| `isValidExcelFormat(Uri uri)` | 验证Excel格式   | `uri`: 文件URI | `boolean`: 是否有效 |
+
+---
+
+## ✨ 特色亮点
 
 1. **用户体验优先**: 采用莫兰迪色系设计，界面清新舒适，长时间学习不易疲劳
 2. **智能学习算法**: 根据用户标记的难度自动调整复习策略
 3. **数据安全**: 本地 SQLite 数据库存储，数据安全可靠
 4. **灵活扩展**: 支持自定义词本导入，满足不同学习需求
 5. **离线使用**: 无需网络连接，随时随地学习
+
+---
 
 **使用提示**: 首次使用请先导入单词数据。建议定期备份学习数据，以防数据丢失。
