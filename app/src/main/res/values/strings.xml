@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">背单词</string>
+
+    <!-- 主界面 -->
+    <string name="main_title">单词学习助手</string>
+    <string name="btn_study">开始学习</string>
+    <string name="btn_test">单词测试</string>
+    <string name="btn_word_list">单词列表</string>
+    <string name="btn_statistics">学习统计</string>
+    <string name="btn_favorite">生词本</string>
+    <string name="btn_import">导入单词</string>
+
+    <!-- 学习界面 -->
+    <string name="study_title">单词学习</string>
+    <string name="word_count">单词数量: %d</string>
+    <string name="current_progress">进度: %d/%d</string>
+    <string name="btn_show_meaning">显示释义</string>
+    <string name="btn_next">下一个</string>
+    <string name="btn_previous">上一个</string>
+    <string name="btn_mark_favorite">收藏</string>
+    <string name="btn_unmark_favorite">取消收藏</string>
+
+    <!-- 测试界面 -->
+    <string name="test_title">单词测试</string>
+    <string name="test_score">得分: %d/%d</string>
+    <string name="test_correct">正确!</string>
+    <string name="test_wrong">错误!</string>
+    <string name="btn_submit">提交答案</string>
+    <string name="btn_finish">完成测试</string>
+
+    <!-- 统计界面 -->
+    <string name="statistics_title">学习统计</string>
+    <string name="total_words">总单词数</string>
+    <string name="learned_words">已学单词</string>
+    <string name="favorite_words">收藏单词</string>
+    <string name="test_count">测试次数</string>
+    <string name="average_score">平均得分</string>
+
+    <!-- 单词列表 -->
+    <string name="word_list_title">单词列表</string>
+    <string name="search_hint">搜索单词...</string>
+
+    <!-- 生词本 -->
+    <string name="favorite_title">生词本</string>
+    <string name="no_favorite">暂无收藏的单词</string>
+
+    <!-- 导入 -->
+    <string name="import_title">导入单词</string>
+    <string name="import_success">导入成功!</string>
+    <string name="import_failed">导入失败!</string>
+    <string name="select_file">选择文件</string>
+
+    <!-- 通用 -->
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="save">保存</string>
+    <string name="no_data">暂无数据</string>
+    <string name="loading">加载中...</string>
+</resources>

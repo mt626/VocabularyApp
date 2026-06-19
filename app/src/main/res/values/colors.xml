@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 莫兰迪色系 - 主背景色 -->
+    <color name="morandi_background">#F8F6F3</color>
+    <color name="morandi_sidebar">#EAE5E0</color>
+    
+    <!-- 莫兰迪色系 - 标签色 -->
+    <color name="morandi_pink">#D9C8C8</color>
+    <color name="morandi_blue">#C8D4D9</color>
+    <color name="morandi_green">#C8D9CF</color>
+    <color name="morandi_purple">#D4C8D9</color>
+    
+    <!-- 莫兰迪色系 - 文字色 -->
+    <color name="morandi_text_primary">#1A1A1A</color>
+    <color name="morandi_text_secondary">#3D3D3D</color>
+    
+    <!-- 莫兰迪色系 - 按钮色 -->
+    <color name="morandi_remember">#B8D4C4</color>
+    <color name="morandi_normal">#B8C8D4</color>
+    <color name="morandi_forget">#D4B8B8</color>
+    
+    <!-- 莫兰迪色系 - 其他 -->
+    <color name="morandi_divider">#DDD8D3</color>
+    <color name="morandi_card">#FFFFFF</color>
+    <color name="morandi_progress">#B8C8D4</color>
+    
+    <!-- 主色调（兼容旧代码） -->
+    <color name="primary">#B8C8D4</color>
+    <color name="primary_dark">#8AAFC4</color>
+    <color name="primary_light">#D4E4F4</color>
+
+    <!-- 辅助色 -->
+    <color name="secondary">#D4B8B8</color>
+    <color name="secondary_dark">#C4A8A8</color>
+    <color name="secondary_light">#E4D4D4</color>
+
+    <!-- 背景色 -->
+    <color name="background">#F8F6F3</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- 文字颜色 -->
+    <color name="text_primary">#4A4A4A</color>
+    <color name="text_secondary">#888888</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <!-- 状态颜色 -->
+    <color name="success">#B8D4C4</color>
+    <color name="error">#D4B8B8</color>
+    <color name="warning">#D4C8B8</color>
+    <color name="info">#B8C8D4</color>
+
+    <!-- 功能颜色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- 卡片颜色 -->
+    <color name="card_study">#D4E4F4</color>
+    <color name="card_test">#E4D4D4</color>
+    <color name="card_list">#C8D9CF</color>
+    <color name="card_statistics">#D4C8B8</color>
+    <color name="card_favorite">#D9C8C8</color>
+</resources>

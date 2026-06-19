@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   backup_rules.xml - Android备份规则配置文件
+   定义哪些数据需要备份
+-->
+<full-backup-content>
+    <!-- 排除数据库文件 -->
+    <exclude domain="database" path="VocabularyDB.db" />
+    <exclude domain="database" path="VocabularyDB.db-journal" />
+</full-backup-content>

@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/morandi_background">
+
+    <!-- 主内容区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- 左侧边栏（32%宽度） -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="32"
+            android:orientation="vertical"
+            android:background="#E0DAD5"
+            android:padding="12dp">
+
+            <!-- 顶部头像打卡区 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        android:background="@drawable/circle_avatar_bg"
+                        android:padding="3dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCheckIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日学习 | 连续1天"
+                        android:textSize="12sp"
+                        android:textColor="#3D3D3D"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressCircle"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="30"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tvProgressPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30%"
+                        android:textSize="12sp"
+                        android:textColor="#1A1A1A"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 学习任务标题 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学习任务"
+                android:textSize="14sp"
+                android:textColor="#1A1A1A"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- 新词卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/morandi_pink"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@android:drawable/ic_menu_add"
+                        app:tint="#1A1A1A"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="新词"
+                            android:textSize="12sp"
+                            android:textColor="#3D3D3D"
+                            android:textStyle="bold"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tvNewWordCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 复习卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/morandi_blue"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@android:drawable/ic_menu_rotate"
+                        app:tint="#1A1A1A"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="复习"
+                            android:textSize="12sp"
+                            android:textColor="#3D3D3D"
+                            android:textStyle="bold"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tvReviewCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="28"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 收藏卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/morandi_green"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@android:drawable/btn_star_big_on"
+                        app:tint="#1A1A1A"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收藏"
+                            android:textSize="12sp"
+                            android:textColor="#3D3D3D"
+                            android:textStyle="bold"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tvFavoriteCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 导入单词卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/morandi_purple"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@android:drawable/ic_menu_upload"
+                        app:tint="#1A1A1A"/>
+
+                    <TextView
+                        android:id="@+id/btnImport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="导入单词"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 底部占位 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- 导航按钮（垂直排列在左下角） -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="上一个"
+                    android:textSize="13sp"
+                    android:textColor="#1A1A1A"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_small_selector"
+                    android:layout_marginBottom="4dp"/>
+
+                <Button
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="收藏"
+                    android:textSize="13sp"
+                    android:textColor="#1A1A1A"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_small_selector"
+                    android:layout_marginBottom="4dp"/>
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="下一个"
+                    android:textSize="13sp"
+                    android:textColor="#1A1A1A"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_small_selector"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 分隔线 -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/morandi_divider"/>
+
+        <!-- 右栏：主学习区域（68%宽度） -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="68"
+            android:orientation="vertical"
+            android:background="@color/morandi_background"
+            android:padding="16dp">
+
+            <!-- 顶部标题栏 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="今日词本：核心词汇"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morandi_text_primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/tvProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="进度 36%"
+                        android:textSize="12sp"
+                        android:textColor="@color/morandi_text_secondary"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="6dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="36"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 单词显示卡片 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardWord"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/morandi_card"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 单词进度（右上角） -->
+                    <TextView
+                        android:id="@+id/tvWordProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1/100"
+                        android:textSize="14sp"
+                        android:textColor="@color/morandi_text_secondary"
+                        android:layout_gravity="top|end"
+                        android:padding="16dp"/>
+
+                    <!-- 单词内容（居中） -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="24dp"
+                        android:gravity="center">
+
+                        <!-- 单词 -->
+                        <TextView
+                            android:id="@+id/tvWord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Beautiful"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/morandi_text_primary"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <!-- 音标 -->
+                        <TextView
+                            android:id="@+id/tvPhonetic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/ˈbjuːtɪfl/"
+                            android:textSize="16sp"
+                            android:textColor="@color/morandi_text_secondary"
+                            android:layout_marginTop="8dp"/>
+
+                        <!-- 词性 -->
+                        <TextView
+                            android:id="@+id/tvPartOfSpeech"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="adj."
+                            android:textSize="12sp"
+                            android:textColor="@color/morandi_text_primary"
+                        android:background="@drawable/tag_purple_bg"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginTop="12dp"/>
+
+                    <!-- 释义 -->
+                    <TextView
+                        android:id="@+id/tvMeaning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="美丽的；漂亮的"
+                        android:textSize="18sp"
+                        android:textColor="@color/morandi_text_primary"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"/>
+
+                    <!-- 助记 -->
+                    <TextView
+                        android:id="@+id/tvMemory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="beauty（美）+ ful（形容词后缀）"
+                        android:textSize="13sp"
+                        android:textColor="@color/morandi_text_secondary"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+
+                    <!-- 例句 -->
+                    <TextView
+                        android:id="@+id/tvExample"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="She is a beautiful girl."
+                        android:textSize="14sp"
+                        android:textColor="@color/morandi_text_secondary"
+                        android:textStyle="italic"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 操作按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/btnForget"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="不熟"
+                    android:textSize="18sp"
+                    android:textColor="@color/morandi_text_primary"
+                    android:background="@drawable/button_forget_selector"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/btnNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="一般"
+                    android:textSize="18sp"
+                    android:textColor="@color/morandi_text_primary"
+                    android:background="@drawable/button_normal_selector"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/btnRemember"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="熟记"
+                    android:textSize="18sp"
+                    android:textColor="@color/morandi_text_primary"
+                    android:background="@drawable/button_remember_selector"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 底部导航栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="#E0DAD5"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/tabStudy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_study"
+                app:tint="#1A1A1A"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学习"
+                android:textSize="12sp"
+                android:textColor="#1A1A1A"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabTest"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_speak"
+                app:tint="#3D3D3D"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试"
+                android:textSize="12sp"
+                android:textColor="#3D3D3D"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_list"
+                app:tint="#3D3D3D"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="列表"
+                android:textSize="12sp"
+                android:textColor="#3D3D3D"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabStats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_stats"
+                app:tint="#3D3D3D"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统计"
+                android:textSize="12sp"
+                android:textColor="#3D3D3D"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabFavorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_favorite"
+                app:tint="#3D3D3D"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏"
+                android:textSize="12sp"
+                android:textColor="#3D3D3D"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
