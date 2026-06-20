@@ -43,7 +43,7 @@
 - 便捷的收藏/取消收藏操作
 - 支持从 Excel 文件批量导入
 
-### 学习数据分析
+### 📊学习数据分析
 
 - **学习统计**: 展示总单词数、已学单词数、学习进度
 - **测试记录**: 记录测试次数、平均得分、最高分
@@ -58,7 +58,7 @@
 - **UI 组件**: Material Design、CardView、RecyclerView
 - **Excel 解析**: Apache POI
 
-### 项目结构
+### 📖项目结构
 
 ```
 VocabularyApp/
@@ -96,7 +96,7 @@ VocabularyApp/
 - Android SDK 24+ (Android 7.0 Nougat)
 - Java Development Kit 8+
 
-### 部署步骤
+### 💾部署步骤
 
 1. 克隆或下载项目到本地
 2. 使用 Android Studio 打开项目
@@ -104,11 +104,29 @@ VocabularyApp/
 4. 连接 Android 设备或启动模拟器
 5. 点击 Run 按钮运行应用
 
-### 数据导入
+### 📥数据导入
 
 1. 准备符合格式的 Excel 文件（参见 Excel 文件格式说明）
-2. 在应用中点击"导入单词"按钮
-3. 选择 Excel 文件完成导入
+2. 将 Excel 文件上传到手机模拟器（参见下方"文件上传至模拟器"说明）
+3. 在应用中点击"导入单词"按钮
+4. 选择模拟器中的 Excel 文件完成导入
+
+#### 文件上传至模拟器
+
+若需要在模拟器中测试导入功能，可先将本地 Excel 文件上传至模拟器存储目录，常用方法如下：
+
+**方法一：通过 Android Studio 的 Device File Explorer**
+1. 点击 Android Studio 右下角的 **Device File Explorer**
+2. 展开模拟器目录，进入 `sdcard/Download/` 或 `storage/emulated/0/Download/`
+3. 右键目标文件夹，选择 **Upload...**，然后选择本地的 `.xlsx` 文件
+4. 上传完成后，在模拟器的"文件管理"中即可看到该文件
+
+**方法二：通过 adb 命令推送**
+打开终端，执行以下命令（将 `path/to/words.xlsx` 替换为本地文件实际路径）：
+```bash
+adb push path/to/words.xlsx /sdcard/Download/
+```
+推送完成后，在模拟器文件管理器中进入 **Download** 文件夹即可找到该文件。
 
 ## Excel 文件格式说明
 
