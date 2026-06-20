@@ -49,7 +49,7 @@
 - **测试记录**: 记录测试次数、平均得分、最高分
 - **可视化展示**: 直观呈现学习成果和进步趋势
 
-## 技术架构
+## 📖技术架构
 
 ### 技术栈
 
@@ -58,7 +58,7 @@
 - **UI 组件**: Material Design、CardView、RecyclerView
 - **Excel 解析**: Apache POI
 
-### 📖项目结构
+### 项目结构
 
 ```
 VocabularyApp/
@@ -88,7 +88,7 @@ VocabularyApp/
 | WordListActivity   | 单词列表     | ui/list/WordListActivity.java         |
 | StatisticsActivity | 统计界面     | ui/statistics/StatisticsActivity.java |
 
-## 安装与使用
+## 💾安装与使用
 
 ### 环境要求
 
@@ -96,7 +96,7 @@ VocabularyApp/
 - Android SDK 24+ (Android 7.0 Nougat)
 - Java Development Kit 8+
 
-### 💾部署步骤
+### 部署步骤
 
 1. 克隆或下载项目到本地
 2. 使用 Android Studio 打开项目
@@ -104,7 +104,7 @@ VocabularyApp/
 4. 连接 Android 设备或启动模拟器
 5. 点击 Run 按钮运行应用
 
-### 📥数据导入
+### 数据导入
 
 1. 准备符合格式的 Excel 文件（参见 Excel 文件格式说明）
 2. 将 Excel 文件上传到手机模拟器（参见下方"文件上传至模拟器"说明）
@@ -132,7 +132,7 @@ adb push path/to/words.xlsx /sdcard/Download/
 
 应用支持从 Excel 文件（.xlsx 格式）批量导入单词数据。详细格式规范请参考项目中的 **Excel文件格式说明.md** 文件。
 
-## 功能流程图
+## 📥功能流程图
 
 ```
 学习流程:
